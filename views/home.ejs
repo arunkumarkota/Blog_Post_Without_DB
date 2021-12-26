@@ -1,0 +1,15 @@
+<%- include partials/header.ejs %>
+
+<h1>Home</h1>
+<p>
+    <%= homeStartingContent %>
+</p>
+<div>
+  <% for (const Post of Posts) {  %>
+    <h1><%= Post.postTitle %></h1>
+    <p><%= Post.postBody.substring(0,100) + "...." %></p>
+    <a href="/posts/<%=Post.postTitle %> "> Read More</a>
+  <% } %>
+</div>
+
+<%- include partials/footer.ejs %>
